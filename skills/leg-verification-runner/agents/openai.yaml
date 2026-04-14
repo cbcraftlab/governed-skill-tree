@@ -1,0 +1,4 @@
+interface:
+  display_name: "Verification Runner"
+  short_description: "Choose and run the right validation path."
+  default_prompt: "Use $leg-verification-runner to determine the best validation path for this change."

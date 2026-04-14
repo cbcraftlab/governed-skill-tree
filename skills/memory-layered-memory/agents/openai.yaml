@@ -1,0 +1,4 @@
+interface:
+  display_name: "Layered Memory"
+  short_description: "Store and recall context across memory layers."
+  default_prompt: "Use $memory-layered-memory to decide what memory layer this belongs to and how it should be recalled later."

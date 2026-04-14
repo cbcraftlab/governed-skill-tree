@@ -1,0 +1,7 @@
+interface:
+  display_name: "Unity Log Debug"
+  short_description: "Diagnose Unity failures by classifying logs, isolating root cause, and routing scene or contract issues correctly."
+  default_prompt: "Use $eye-unity-log-debug to classify compile, runtime, scene-side, contract-side, or test-side failures, isolate the root cause, and recommend the smallest safe next step before any edits."
+
+policy:
+  allow_implicit_invocation: true

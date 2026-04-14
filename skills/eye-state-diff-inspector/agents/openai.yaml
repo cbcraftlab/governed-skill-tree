@@ -1,0 +1,4 @@
+interface:
+  display_name: "State Diff Inspector"
+  short_description: "Compare two states and isolate meaningful deltas."
+  default_prompt: "Use $eye-state-diff-inspector to compare these two states and identify the meaningful differences."

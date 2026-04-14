@@ -1,0 +1,4 @@
+interface:
+  display_name: "Tone Regulator"
+  short_description: "Regulate warmth and expression without affecting decisions."
+  default_prompt: "Use $collab-tone-regulator to shape the communication tone while preserving the same facts and decisions."

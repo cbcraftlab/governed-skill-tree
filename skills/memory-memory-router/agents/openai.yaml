@@ -1,0 +1,4 @@
+interface:
+  display_name: "Memory Router"
+  short_description: "Route memory work to the right memory operation and layer."
+  default_prompt: "Use $memory-memory-router to decide whether this should be stored, recalled, compressed, journaled, or handed off."

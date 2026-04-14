@@ -1,0 +1,4 @@
+interface:
+  display_name: "Tool Routing"
+  short_description: "Route work to the right tool or skill surface."
+  default_prompt: "Use $brain-tool-routing to decide which tool or skill surface best fits this task."

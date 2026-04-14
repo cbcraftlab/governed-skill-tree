@@ -1,0 +1,4 @@
+interface:
+  display_name: "Skill Orchestrator"
+  short_description: "Route tasks to the right skills and phase."
+  default_prompt: "Use $brain-skill-orchestrator to classify this task and choose the right skill workflow."

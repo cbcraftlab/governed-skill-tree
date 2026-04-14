@@ -1,0 +1,4 @@
+interface:
+  display_name: "Intent Parser"
+  short_description: "Turn fuzzy user feedback into actionable intent."
+  default_prompt: "Use $ear-interaction-intent-parse to translate this user feedback into concrete engineering intent."

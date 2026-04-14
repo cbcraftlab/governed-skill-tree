@@ -1,0 +1,4 @@
+interface:
+  display_name: "Work State Controller"
+  short_description: "Control task phase transitions and next steps."
+  default_prompt: "Use $controller-work-state-controller to determine the current work phase and the safest next transition."

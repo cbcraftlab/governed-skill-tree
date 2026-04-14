@@ -1,0 +1,4 @@
+interface:
+  display_name: "Capability Gap Detect"
+  short_description: "Detect reusable skill gaps and propose safe new skills."
+  default_prompt: "Use $brain-capability-gap-detect to assess whether this repeated workflow should become a new governed skill."

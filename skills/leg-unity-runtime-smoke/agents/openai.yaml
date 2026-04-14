@@ -1,0 +1,7 @@
+interface:
+  display_name: "Unity Runtime Smoke"
+  short_description: "Run focused Play Mode smoke checks, classify the scope, and report pass/fail/blocked with clean handoffs."
+  default_prompt: "Use $leg-unity-runtime-smoke to validate the smallest meaningful runtime path, separate compile success from runtime success, and route failures toward the right follow-up skill."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Unity Codex Guard"
+  short_description: "Prepare safe, approval-ready Unity edit plans by reading constraints, classifying risk, and stopping before file changes."
+  default_prompt: "Use $balance-unity-codex-guard before Unity edits to read project constraints, classify risk, define the smallest safe scope, and require explicit approval before changing files."
+
+policy:
+  allow_implicit_invocation: true

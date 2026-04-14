@@ -1,0 +1,7 @@
+interface:
+  display_name: "Unity Scene Audit"
+  short_description: "Inspect scene wiring, prefab setup, hierarchy paths, active-state gates, and serialized references without drifting into broad debugging."
+  default_prompt: "Use $eye-unity-scene-audit to inspect whether a Unity scene or prefab is wired correctly, report concrete scene findings, and decide whether the issue is scene-side, code-side, or still unclear."
+
+policy:
+  allow_implicit_invocation: true

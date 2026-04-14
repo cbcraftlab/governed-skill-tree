@@ -1,0 +1,4 @@
+interface:
+  display_name: "Workspace Bootstrap"
+  short_description: "Quickly understand a new repo or worktree."
+  default_prompt: "Use $brain-workspace-bootstrap to quickly understand this workspace before we start changing things."
