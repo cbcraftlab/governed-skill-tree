@@ -8,6 +8,23 @@ It separates routing, phase control, tool choice, risk interception, verificatio
 
 This first public batch focuses on the minimum set needed to show the design clearly.
 
+## 中文简介
+
+这是一个面向人机协作的“受治理技能树”实验。
+
+它不是简单堆一堆 prompt 或 skill，而是把一套长期会增长的 AI 能力系统，拆成更清楚的职责层：
+
+- `brain` 负责任务归类和能力路由
+- `controller` 负责阶段判断和阶段切换
+- `brain-tool-routing` 负责当前步骤的工具选择
+- `balance` 负责风险拦截、假设审计和影响范围约束
+- `leg` 负责实现与验证
+- `memory` / `collab` 负责记忆、交接和对人表达
+
+当前公开版先放通用核心，再放一个 `Unity showcase pack` 作为成熟案例。
+
+也就是说，`Unity 不是这套系统的全部，而是目前最完整的样板间。`
+
 ## Why It Feels Different
 
 Most skill collections collapse several responsibilities into one fuzzy layer.
