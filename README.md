@@ -1,6 +1,7 @@
 # Governed Skill Tree
 
 > A governed skill system for long-horizon human-AI collaboration.
+> > Stop building prompt soup. Govern the tree.
 
 Governed Skill Tree is an organ-based skill system for human-AI collaboration.
 
