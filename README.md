@@ -54,6 +54,17 @@ If you're new to this repo, use this reading order:
 
 If you only read one thing after this README, read **`docs/governance.md`** first.
 
+## Release Notes
+
+- **[`docs/release-notes-v0.1.0.md`](docs/release-notes-v0.1.0.md)**  
+  First public slice of the repository.
+
+- **[`docs/release-scope.md`](docs/release-scope.md)**  
+  What is intentionally included in the public slice, and what is intentionally left out.
+
+- **[`docs/release-checklist.md`](docs/release-checklist.md)**  
+  Release readiness checklist for this repository.
+
 ## Who This Is For
 
 This repo is for people who are trying to move beyond:
