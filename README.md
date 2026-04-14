@@ -146,17 +146,19 @@ This release focuses on the smallest set that shows the system's shape clearly.
 
 The Unity pack is included as a flagship domain example, not as the whole identity of the system.
 
+
 ## System Flow
+
+The system stays governable by separating the main path of work into distinct layers:
 
 ```mermaid
 flowchart LR
-    A["Workspace Bootstrap"] --> B["Capability Routing"]
-    B --> C["Phase Control"]
-    C --> D["Tool Routing"]
-    D --> E["Domain Skill Execution"]
-    E --> F["Verification"]
-    F --> G["Compression, Handoff, or Storage"]
-```
+    A[Workspace Bootstrap] --> B[Capability Routing]
+    B --> C[Phase Control]
+    C --> D[Tool Routing]
+    D --> E[Domain Skill Execution]
+    E --> F[Verification]
+    F --> G[Compression / Handoff / Storage]
 
 ## What Makes This Different
 
