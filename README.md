@@ -39,15 +39,18 @@ If you're new to this repo, use this reading order:
    - Read this to see how work moves through the system:
      bootstrap → routing → phase control → tool choice → execution → verification → handoff.
 
-4. **`SKILL_TREE.md`**
+4. **`docs/evaluation-notes.md`**
+   - Read this if you want the rationale behind the separation model and the failure modes this system is designed to reduce.
+
+5. **`SKILL_TREE.md`**
    - Use this as the logical map of the current skill structure, migration status, and layering strategy.
 
-5. **Examples**
+6. **Examples**
    - Start with the example closest to your use case:
-     - **Ambiguous Task Routing** → how the system classifies unclear requests
-     - **Pre-Change Risk And Dependency Scan** → how risk is intercepted before execution
-     - **Unity Debug To Runtime Smoke** → how a domain workflow connects execution and verification
-     - **Skill Growth Proposal** → how the system evolves deliberately instead of reactively
+     - **Ambiguous Task Routing** → best entry point for request classification
+     - **Pre-Change Risk And Dependency Scan** → best entry point for safe execution
+     - **Unity Debug To Runtime Smoke** → best entry point for domain workflow
+     - **Skill Growth Proposal** → best entry point for governed evolution
 
 If you only read one thing after this README, read **`docs/governance.md`** first.
 
