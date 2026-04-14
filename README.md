@@ -23,7 +23,50 @@ This first public batch focuses on the minimum set needed to show the design cle
 
 当前公开版先放通用核心，再放一个 `Unity showcase pack` 作为成熟案例。
 
-也就是说，`Unity 不是这套系统的全部，而是目前最完整的样板间。`
+也就是说，`Unity 不是这套系统的全部，而是目前最完整的链路。`
+
+## Where to Start
+
+If you're new to this repo, use this reading order:
+
+1. **This README**
+   - Understand the core idea, system flow, and public scope.
+
+2. **`docs/governance.md`**
+   - Read this to understand authority boundaries, conflict handling, and why the system is governed instead of flattened.
+
+3. **`docs/intake-pipeline.md`**
+   - Read this to see how work moves through the system:
+     bootstrap → routing → phase control → tool choice → execution → verification → handoff.
+
+4. **`SKILL_TREE.md`**
+   - Use this as the logical map of the current skill structure, migration status, and layering strategy.
+
+5. **Examples**
+   - Start with the example closest to your use case:
+     - **Ambiguous Task Routing** → how the system classifies unclear requests
+     - **Pre-Change Risk And Dependency Scan** → how risk is intercepted before execution
+     - **Unity Debug To Runtime Smoke** → how a domain workflow connects execution and verification
+     - **Skill Growth Proposal** → how the system evolves deliberately instead of reactively
+
+If you only read one thing after this README, read **`docs/governance.md`** first.
+
+## Who This Is For
+
+This repo is for people who are trying to move beyond:
+
+- flat skill folders
+- giant prompt piles
+- loosely coupled agent behaviors
+- unclear routing between planning, execution, verification, and handoff
+
+It is especially relevant if you care about:
+
+- long-horizon human-AI collaboration
+- governed task routing
+- explicit phase control
+- safer domain execution
+- deliberate skill growth over time
 
 ## Why It Feels Different
 
