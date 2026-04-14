@@ -159,6 +159,7 @@ flowchart LR
     D --> E[Domain Skill Execution]
     E --> F[Verification]
     F --> G[Compression / Handoff / Storage]
+```md
 
 ## What Makes This Different
 
