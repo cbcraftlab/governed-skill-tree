@@ -54,11 +54,11 @@ If you're new to this repo, use this reading order:
    - Read these if you want to understand why governed structure changes system behavior over time.
      
 7. **`Examples`**
-   * Start with the example closest to your use case:
+   - Start with the example closest to your use case:
    - Ambiguous Task Routing → best entry point for request classification
    - Pre-Change Risk And Dependency Scan → best entry point for safe execution
    - Unity Debug To Runtime Smoke → best entry point for domain workflow
-   - Skill Growth Proposal → best entry point for governed evolution
+   - Evaluating a Skill Growth Request → best entry point for governed evolution
 
 If you only read one thing after this README, read **`docs/governance.md`** first.
 
