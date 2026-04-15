@@ -252,7 +252,7 @@ Read:
 ├─ cases/
 ├─ docs/
 ├─ examples/
-└─ skills/
+├─ skills/
 
 The `skills/` directory is intentionally flat.
 
