@@ -49,7 +49,7 @@ If you're new to this repo, use this reading order:
 
 5. **`SKILL_TREE.md`**
    - Use this as the logical map of the current skill structure, migration status, and layering strategy.
-   - 
+     
 6. **`Cases`**
    - Read these if you want to understand why governed structure changes system behavior over time.
      
