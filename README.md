@@ -7,6 +7,8 @@ Governed Skill Tree is an organ-based skill system for human-AI collaboration.
 
 It separates routing, phase control, tool choice, risk interception, verification, memory, and communication into explicit governed layers so a skill tree can grow without turning into prompt soup.
 
+If MCP gives AI hands, this project explores what else must exist for AI to work more like a real collaborator: routing, control, memory, judgment, verification, and communication.
+
 This first public batch focuses on the minimum set needed to show the design clearly.
 
 ## 中文简介
@@ -14,6 +16,8 @@ This first public batch focuses on the minimum set needed to show the design cle
 这是一个面向人机协作的“受治理技能树”实验。
 
 它不是简单堆一堆 prompt 或 skill，而是把一套长期会增长的 AI 能力系统，拆成更清楚的职责层：
+
+如果把 AI 比作一个人，MCP 更像是补齐“手”和工具调用能力；而这个项目想补的是路由、控制、记忆、验证、表达这些让 AI 更像真实协作者的其他器官。
 
 - `brain` 负责任务归类和能力路由
 - `controller` 负责阶段判断和阶段切换
