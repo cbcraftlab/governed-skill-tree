@@ -63,15 +63,15 @@ If you only read one thing after this README, read **`docs/governance.md`** firs
 
 These cases show how governed skill systems behave differently from flat prompt or skill collections.
 
-- [Flat Skill Pile vs Governed Flow](./docs/case-before-after-flat-vs-governed.md)  
+- [Flat Skill Pile vs Governed Flow](./cases/flat-skill-pile-vs-governed-flow.md)  
   Why structure matters before scale.
 
-- [Skill Growth Proposal](./docs/case-skill-growth-proposal.md)  
+- [Skill Growth Proposal](./cases/skill-growth-proposal.md)  
   Why not every repeated problem should create a new skill.
 
-- [Handoff and Continuity](./docs/case-handoff-continuity.md)  
+- [Handoff and Continuity](./cases/handoff-continuity.md)  
   Why long-horizon collaboration needs explicit continuity design.
-
+  
 ## Release Notes
 
 - **[`docs/release-notes-v0.1.0.md`](docs/release-notes-v0.1.0.md)**  
