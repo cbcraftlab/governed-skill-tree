@@ -9,6 +9,8 @@ It separates task intake, routing, phase control, tool choice, risk interception
 
 If MCP gives AI hands, this project explores what else must exist for AI to work more like a real collaborator: input judgment, routing, control, memory, verification, and communication.
 
+It does not claim to eliminate AI hallucinations. It tries to make wrong premises, missing referents, and unverified confirmations harder to turn into tool calls, file changes, memory writes, or project execution.
+
 This first public batch focuses on the minimum set needed to show the design clearly.
 
 ## 中文简介
@@ -25,6 +27,8 @@ This first public batch focuses on the minimum set needed to show the design cle
 - “这个 / 那个 / 上一个结论”到底指向什么？
 - “专家确认 / 不用问 / 直接继续”这类话，是否真的构成可执行批准？
 - 一个回答会不会影响路线、实现、文档、记忆或项目状态？
+
+它不承诺消灭 AI 幻觉，而是试图让错前提、缺对象和未经验证的确认更难直接变成工具调用、文件改动、记忆写入或项目执行。
 
 - `brain` 负责任务归类和能力路由
 - `controller` 负责阶段判断和阶段切换
