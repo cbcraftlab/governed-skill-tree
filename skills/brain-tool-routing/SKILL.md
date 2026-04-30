@@ -9,9 +9,9 @@ description: Use this skill to choose the execution surface for the current step
 
 - `Primary Role`: current-step tool-surface routing
 - `Secondary Role`: execution fallback planning
-- `Can Block`: yes, when permissions, environment limits, or surface mismatch make the step unsafe to execute
+- `Can Block`: yes, when permissions, environment limits, surface mismatch, or a missing execution referent make the step unsafe to execute
 - `Can Escalate`: yes, by redirecting to `brain-skill-orchestrator`, `controller-work-state-controller`, or a safer fallback surface
-- `Depends On`: a known immediate job and a known or intentionally fixed phase
+- `Depends On`: a known immediate job, a known execution referent, and a known or intentionally fixed phase
 - `Specialization`: generic
 
 ## Overview
@@ -68,6 +68,7 @@ Expect:
 Use this skill only when:
 
 - the immediate job is already known
+- the object or referent of the step is known, not merely guessed from old context
 - the current phase is already known or intentionally fixed
 - the remaining question is which surface should execute the step
 
@@ -85,10 +86,11 @@ Route work among these surfaces:
 ## Workflow
 
 1. identify the immediate job, not the whole project
-2. identify which surface can answer that job most directly
-3. check safety, permissions, and environment limits
-4. prefer one primary surface unless parallel work is clearly beneficial
-5. name the fallback if the preferred surface is blocked
+2. identify the object or referent the job applies to
+3. identify which surface can answer that job most directly
+4. check safety, permissions, and environment limits
+5. prefer one primary surface unless parallel work is clearly beneficial
+6. name the fallback if the preferred surface is blocked
 
 ## Routing Priorities
 
@@ -126,6 +128,7 @@ When this skill is active, produce:
 ## Rules
 
 - route the current step, not the entire roadmap
+- block tool selection when the action target is missing, ambiguous, or only context-inferred
 - prefer the lowest-overhead surface that still preserves correctness
 - separate "can run" from "should run"
 - say explicitly when permissions or sandbox limits matter

@@ -9,7 +9,7 @@ description: Use this skill as the phase authority for the current task when Cod
 
 - `Primary Role`: phase authority
 - `Secondary Role`: transition safety gating
-- `Can Block`: yes, when the next phase lacks evidence, approval, or safety preconditions
+- `Can Block`: yes, when the next phase lacks evidence, a known target, approval, or safety preconditions
 - `Can Escalate`: yes, by redirecting to `balance-*`, `brain-skill-orchestrator`, or `brain-tool-routing` when the blocker is outside phase control
 - `Depends On`: a task that needs phase judgment or safe next-step confirmation
 - `Specialization`: generic
@@ -46,7 +46,7 @@ If the task family is unclear, hand off to `brain-skill-orchestrator`.
 
 If the current step is known but the tool surface is unclear, hand off to `brain-tool-routing`.
 
-If the transition is blocked by unresolved risk, missing approval, or compatibility uncertainty, hand off to the relevant `balance-*` skill before allowing the phase change.
+If the transition is blocked by unresolved risk, a missing target, missing approval, or compatibility uncertainty, hand off to the relevant `balance-*` skill before allowing the phase change.
 
 ## Trigger
 
@@ -97,7 +97,9 @@ Allowed when the main uncertainty is reduced enough to choose a bounded path.
 
 ### Decide -> Implement
 
-Allowed when scope, affected files, verification intent, and risk posture are understood, and any required approval exists.
+Allowed when scope, target object, affected files, verification intent, and risk posture are understood, and any required approval exists.
+
+Blocked when the target is expressed only as "this", "that", "the previous conclusion", or a similar context-inferred referent that could change files, docs, memory, project state, or execution behavior.
 
 ### Implement -> Validate
 
@@ -126,6 +128,7 @@ When this skill is active, produce:
 - determine phase from evidence, not intent
 - recommend one next transition, not multiple competing branches
 - stop phase advancement when approval or risk gates are missing
+- stop phase advancement when the action target is missing, ambiguous, or only context-inferred
 - keep validation separate from implementation even when implementation feels complete
 
 ## Boundaries

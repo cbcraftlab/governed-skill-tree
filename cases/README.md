@@ -13,6 +13,9 @@ These case studies show why governed skill systems behave differently from flat 
 - [Handoff and Continuity](./handoff-continuity.md)  
   Why long-horizon collaboration needs explicit continuity design.
 
+- [Missing Referent Execution Stop](./missing-referent-execution-stop.md)
+  Why ambiguous "this/that" requests should not trigger tool use or project execution.
+
 ## Why this section exists
 
 The goal of these cases is not to provide runnable examples.
@@ -22,3 +25,4 @@ The goal is to make the structural logic of governed skill systems easier to ins
 - why flow governance matters
 - why growth should be proposed instead of improvised
 - why continuity must be designed for long-horizon collaboration
+- why input ambiguity must be resolved before execution
