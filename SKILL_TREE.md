@@ -6,6 +6,7 @@ It preserves the same design invariants used by the larger internal system:
 
 - organ-based logical layering
 - flat physical storage for compatibility
+- input-side safety before execution
 - governance before uncontrolled growth
 - gradual migration instead of violent replacement
 
@@ -15,6 +16,7 @@ It preserves the same design invariants used by the larger internal system:
 - physical storage stays flat inside `skills/`
 - generic skills are the cross-project layer
 - domain packs are allowed when they remain clearly specialized
+- ambiguous inputs are classified before they become routing or execution
 - compatibility and migration should be explicit
 
 ## Naming Families
@@ -40,6 +42,8 @@ Additional supported families:
 
 ### Authority Boundaries
 
+- input-side safety gates
+  stop missing referents, inherited claims, and authority pressure before tool use
 - `brain-skill-orchestrator`
   owns task classification and capability-family selection
 - `controller-work-state-controller`
@@ -67,6 +71,8 @@ Use this precedence when multiple skills could lead:
 
 Escalate when:
 
+- the request target is missing or only inferred from old context
+- a claimed approval or external authority is unverified
 - a risky step lacks approval
 - assumptions are carrying too much of the plan
 - impact scope is still unclear
@@ -74,13 +80,15 @@ Escalate when:
 
 ## Default Intake Pipeline
 
-1. workspace bootstrap if context is still weak
-2. capability-family routing
-3. phase determination
-4. current-step tool routing
-5. domain skill execution
-6. proportional verification
-7. human-facing output, compression, or handoff
+1. classify the input before inheriting its premise
+2. apply cognitive and decision gates when the request may shape action
+3. workspace bootstrap if context is still weak
+4. capability-family routing
+5. phase determination
+6. current-step tool routing
+7. domain skill execution
+8. proportional verification
+9. human-facing output, compression, or handoff
 
 Permitted short-circuits are allowed only when they do not steal authority from another layer.
 

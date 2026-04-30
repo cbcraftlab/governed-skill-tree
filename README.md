@@ -5,9 +5,9 @@
 
 Governed Skill Tree is an organ-based skill system for human-AI collaboration.
 
-It separates routing, phase control, tool choice, risk interception, verification, memory, and communication into explicit governed layers so a skill tree can grow without turning into prompt soup.
+It separates task intake, routing, phase control, tool choice, risk interception, verification, memory, and communication into explicit governed layers so a skill tree can grow without turning into prompt soup.
 
-If MCP gives AI hands, this project explores what else must exist for AI to work more like a real collaborator: routing, control, memory, judgment, verification, and communication.
+If MCP gives AI hands, this project explores what else must exist for AI to work more like a real collaborator: input judgment, routing, control, memory, verification, and communication.
 
 This first public batch focuses on the minimum set needed to show the design clearly.
 
@@ -42,18 +42,21 @@ If you're new to this repo, use this reading order:
 
 3. **`docs/intake-pipeline.md`**
    - Read this to see how work moves through the system:
-     bootstrap → routing → phase control → tool choice → execution → verification → handoff.
+     input classification → safety gates → bootstrap → routing → phase control → tool choice → execution → verification → handoff.
 
-4. **`docs/evaluation-notes.md`**
+4. **`docs/decision-and-cognitive-gates.md`**
+   - Read this to understand how the system handles ambiguous input, missing referents, authority pressure, and action-shaping answers before execution.
+
+5. **`docs/evaluation-notes.md`**
    - Read this if you want the rationale behind the separation model and the failure modes this system is designed to reduce.
 
-5. **`SKILL_TREE.md`**
+6. **`SKILL_TREE.md`**
    - Use this as the logical map of the current skill structure, migration status, and layering strategy.
      
-6. **`Cases`**
+7. **`Cases`**
    - Read these if you want to understand why governed structure changes system behavior over time.
      
-7. **`Examples`**
+8. **`Examples`**
    - Start with the example closest to your use case:
    - Ambiguous Task Routing → best entry point for request classification
    - Pre-Change Risk And Dependency Scan → best entry point for safe execution
@@ -74,8 +77,14 @@ These cases show how governed skill systems behave differently from flat prompt 
 
 - [Handoff and Continuity](./cases/handoff-continuity.md)  
   Why long-horizon collaboration needs explicit continuity design.
+
+- [Missing Referent Execution Stop](./cases/missing-referent-execution-stop.md)
+  Why ambiguous "this/that" requests should not trigger tool use or project execution.
   
 ## Release Notes
+
+- **[`docs/release-notes-v0.1.1.md`](docs/release-notes-v0.1.1.md)**
+  Public boundary patch for input safety gates and missing-referent execution stops.
 
 - **[`docs/release-notes-v0.1.0.md`](docs/release-notes-v0.1.0.md)**  
   First public slice of the repository.
@@ -120,6 +129,7 @@ That separation is the main idea.
 ## At A Glance
 
 - explicit routing authority
+- input-side safety gates
 - phase control
 - tool-surface boundaries
 - risk interception
@@ -147,6 +157,8 @@ This project treats the skill layer as a governed operating surface, not just a 
   Live skills still sit in a flat `skills/` directory for runtime compatibility.
 - `hard authority boundaries`
   Routing, phase control, tool choice, risk interception, execution, and human-facing output do not silently collapse into one layer.
+- `input-side safety gates`
+  Ambiguous referents, authority pressure, and action-shaping conclusions are checked before routing turns into execution.
 - `task intake pipeline`
   A task should enter the system in a predictable order.
 - `gradual evolution`
@@ -188,12 +200,14 @@ The system stays governable by separating the main path of work into distinct la
 
 ```mermaid
 flowchart LR
-    A[Workspace Bootstrap] --> B[Capability Routing]
-    B --> C[Phase Control]
-    C --> D[Tool Routing]
-    D --> E[Domain Skill Execution]
-    E --> F[Verification]
-    F --> G[Compression / Handoff / Storage]
+    A[Input Classification] --> B[Cognitive / Decision Gates]
+    B --> C[Workspace Bootstrap]
+    C --> D[Capability Routing]
+    D --> E[Phase Control]
+    E --> F[Tool Routing]
+    F --> G[Domain Skill Execution]
+    G --> H[Verification]
+    H --> I[Compression / Handoff / Storage]
 ```
 
 ## What Makes This Different
@@ -204,6 +218,8 @@ flowchart LR
   `controller-work-state-controller` owns phase transitions, but not which execution surface to use.
 - `tool choice is not risk approval`
   `brain-tool-routing` can choose the current tool surface, but cannot approve risky work.
+- `input understanding is not execution approval`
+  A request with missing referents, inherited claims, or authority pressure must be clarified before it can drive tool use.
 - `governance is explicit`
   `balance-*` skills can intercept unsafe moves instead of relying on vague "be careful" wording.
 - `growth is governed`
@@ -226,19 +242,22 @@ build a skill system that can keep growing without losing routing clarity, safet
 
 Default intake flow:
 
-1. bootstrap the workspace if needed
-2. classify the task and choose the lead organ
-3. determine the current work phase
-4. choose the current execution surface
-5. run the domain skill
-6. verify proportionally
-7. compress, hand off, or store the result
+1. classify the input before inheriting its premise
+2. stop on missing referents, unverified authority claims, or action-shaping uncertainty
+3. bootstrap the workspace if needed
+4. classify the task and choose the lead organ
+5. determine the current work phase
+6. choose the current execution surface
+7. run the domain skill
+8. verify proportionally
+9. compress, hand off, or store the result
 
 Read:
 
 - [SKILL_TREE.md](SKILL_TREE.md)
 - [docs/governance.md](docs/governance.md)
 - [docs/intake-pipeline.md](docs/intake-pipeline.md)
+- [docs/decision-and-cognitive-gates.md](docs/decision-and-cognitive-gates.md)
 - [docs/metadata-schema.md](docs/metadata-schema.md)
 - [docs/release-scope.md](docs/release-scope.md)
 - [docs/what-this-is-not.md](docs/what-this-is-not.md)
@@ -272,7 +291,7 @@ If you want to try the structure in a Codex-compatible environment:
 - [Ambiguous Task Routing](examples/ambiguous-task-routing.md)
 - [Pre-Change Risk And Dependency Scan](examples/pre-change-risk-and-dependency-scan.md)
 - [Unity Debug To Runtime Smoke](examples/unity-debug-to-runtime-smoke.md)
-- [Skill Growth Proposal](examples/skill-growth-proposal.md)
+- [Evaluating A Skill Growth Request](examples/evaluating-skill-growth-request.md)
 
 ## Contributing
 
