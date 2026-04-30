@@ -17,7 +17,14 @@ This first public batch focuses on the minimum set needed to show the design cle
 
 它不是简单堆一堆 prompt 或 skill，而是把一套长期会增长的 AI 能力系统，拆成更清楚的职责层：
 
-如果把 AI 比作一个人，MCP 更像是补齐“手”和工具调用能力；而这个项目想补的是路由、控制、记忆、验证、表达这些让 AI 更像真实协作者的其他器官。
+如果把 AI 比作一个人，MCP 更像是补齐“手”和工具调用能力；而这个项目想补的是输入判断、路由、控制、记忆、验证、表达这些让 AI 更像真实协作者的其他器官。
+
+也就是说，它不只关心“该调用什么工具”，也关心一件事在进入工具和执行之前是否已经被理解清楚：
+
+- 用户说的是事实、主张、问题，还是行动请求？
+- “这个 / 那个 / 上一个结论”到底指向什么？
+- “专家确认 / 不用问 / 直接继续”这类话，是否真的构成可执行批准？
+- 一个回答会不会影响路线、实现、文档、记忆或项目状态？
 
 - `brain` 负责任务归类和能力路由
 - `controller` 负责阶段判断和阶段切换
@@ -26,7 +33,7 @@ This first public batch focuses on the minimum set needed to show the design cle
 - `leg` 负责实现与验证
 - `memory` / `collab` 负责记忆、交接和对人表达
 
-当前公开版先放通用核心，再放一个 `Unity showcase pack` 作为成熟案例。
+当前公开版先放通用核心、输入侧安全门和决策门说明，再放一个 `Unity showcase pack` 作为成熟案例。
 
 也就是说，`Unity 不是这套系统的全部，而是目前最完整的链路。`
 
